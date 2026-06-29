@@ -10,10 +10,10 @@ Animasi ini menyampaikan narasi visual mengenai makna mendalam di balik motif ba
 
 Proyek ini mengintegrasikan berbagai konsep dasar grafika komputer dan multimedia yang dipelajari selama perkuliahan, meliputi:
 
-1. **Transformasi Geometri Dua Dimensi:** Memanfaatkan fungsi isolasi koordinat melalui instruksi `pushMatrix()` dan `popMatrix()` serta memanipulasi posisi, orientasi, dan ukuran objek menggunakan perintah `translate()`, `rotate()`, dan `scale()`.
-2. **Algoritma Pola Generatif:** Menggunakan struktur perulangan bersarang (nested loops) untuk merender pola geometris berulang yang presisi guna menghasilkan visualisasi kain batik secara efisien.
-3. **Manajemen Waktu dan Pergantian Scene:** Menggunakan fungsi internal `millis()` untuk mengontrol timeline transisi antar-adegan (scene management) dan efek fade-in/fade-out berbasis parameter kecerahan/alpha tanpa menghentikan kelancaran render thread (menghindari penggunaan fungsi `delay()`).
-4. **Komposisi Multi-layer Visual:** Menerapkan teknik penumpukan lapisan (layering) visual di mana latar belakang generatif digambar terlebih dahulu sebelum merender aset citra digital (sprite) eksternal untuk menjaga kedalaman visual.
+1. Transformasi Geometri Dua Dimensi: memanfaatkan fungsi isolasi koordinat melalui instruksi pushMatrix() dan popMatrix() serta memanipulasi posisi, orientasi, dan ukuran objek menggunakan perintah translate(), rotate(), dan scale().
+2. Algoritma Pola Generatif: menggunakan struktur perulangan bersarang untuk merender pola geometris berulang yang presisi guna menghasilkan visualisasi kain batik secara efisien.
+3. Manajemen Waktu dan Pergantian Scene: menggunakan fungsi millis() untuk mengontrol timeline transisi antar-adegan dan efek fade-in/fade-out tanpa menghentikan kelancaran render thread.
+4. Komposisi Multi-layer Visual: menerapkan teknik penumpukan lapisan visual di mana latar belakang generatif digambar terlebih dahulu sebelum merender aset citra digital eksternal.
 
 ## Struktur Direktori
 
@@ -24,8 +24,14 @@ Kelompok-DAUN/
 │   ├── SceneKawung.pde            # Modul logika visual motif Kawung
 │   ├── SceneParang.pde            # Modul logika visual motif Parang
 │   └── data/                      # Direktori penyimpanan aset eksternal
-│       ├── karakter.png      
+│       └── karakter.png
 ├── Docs/                          # Dokumentasi perencanaan proyek
 │   └── Storyboard.pdf
 ├── CLAUDE.md                      # Panduan aturan koding dan standar AI
 └── README.md                      # Deskripsi utama repository
+```
+
+## Struktur Utama
+- AnimasiBatik/: folder proyek Processing utama
+- Docs/: dokumen perencanaan proyek
+- CLAUDE.md: panduan aturan coding dan standar AI
