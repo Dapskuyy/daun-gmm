@@ -24,8 +24,7 @@ Kelompok-DAUN/
 │   ├── SceneKawung.pde            # Modul logika visual motif Kawung
 │   ├── SceneParang.pde            # Modul logika visual motif Parang
 │   └── data/                      # Direktori penyimpanan aset eksternal
-│       ├── karakter_diam.png      
-│       └── karakter_memanjat.png  
+│       ├── karakter.png      
 ├── Docs/                          # Dokumentasi perencanaan proyek
 │   ├── Storyboard.pdf
 │   └── Rancangan_Animasi.md
