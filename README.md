@@ -1,4 +1,4 @@
-Proyek Animasi Grafika dan Multimedia - Jejak Makna dalam Sehelai Batik
+**Proyek Animasi Grafika dan Multimedia - Jejak Makna dalam Sehelai Batik
 Repository ini memuat kode sumber, aset, dan dokumentasi teknis untuk proyek akhir mata kuliah Grafika dan Multimedia. Proyek ini berupa sketsa animasi generatif interaktif yang dikembangkan menggunakan lingkungan pengembangan Processing (Java) dengan fokus mengangkat nilai budaya dan filosofi di balik motif batik tradisional Indonesia.
 
 Deskripsi Proyek
@@ -15,21 +15,6 @@ Manajemen Waktu dan Pergantian Scene: Menggunakan fungsi internal millis() untuk
 
 Komposisi Multi-layer Visual: Menerapkan teknik penumpukan lapisan (layering) visual di mana latar belakang generatif digambar terlebih dahulu sebelum merender aset citra digital (sprite) eksternal untuk menjaga kedalaman visual.
 
-Struktur Direktori
-Plaintext
-Kelompok-DAUN/
-├── AnimasiBatik/                  # Folder utama sketsa Processing
-│   ├── AnimasiBatik.pde           # File eksekusi utama (setup dan draw)
-│   ├── SceneKawung.pde            # Modul logika visual motif Kawung
-│   ├── SceneParang.pde            # Modul logika visual motif Parang
-│   └── data/                      # Direktori penyimpanan aset eksternal
-│       ├── karakter_diam.png      
-│       └── karakter_memanjat.png  
-├── Docs/                          # Dokumentasi perencanaan proyek
-│   ├── Storyboard.pdf
-│   └── Rancangan_Animasi.md
-├── CLAUDE.md                      # Panduan aturan koding dan standar AI
-└── README.md                      # Deskripsi utama repository
 Persyaratan Sistem dan Cara Menjalankan
 Untuk menjalankan sketsa animasi ini secara lokal, pastikan perangkat Anda telah memenuhi spesifikasi berikut:
 
