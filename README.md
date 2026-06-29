@@ -26,7 +26,6 @@ Kelompok-DAUN/
 │   └── data/                      # Direktori penyimpanan aset eksternal
 │       ├── karakter.png      
 ├── Docs/                          # Dokumentasi perencanaan proyek
-│   ├── Storyboard.pdf
-│   └── Rancangan_Animasi.md
+│   └── Storyboard.pdf
 ├── CLAUDE.md                      # Panduan aturan koding dan standar AI
 └── README.md                      # Deskripsi utama repository
