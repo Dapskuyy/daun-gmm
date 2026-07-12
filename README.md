@@ -15,23 +15,6 @@ Proyek ini mengintegrasikan berbagai konsep dasar grafika komputer dan multimedi
 3. Manajemen Waktu dan Pergantian Scene: menggunakan fungsi millis() untuk mengontrol timeline transisi antar-adegan dan efek fade-in/fade-out tanpa menghentikan kelancaran render thread.
 4. Komposisi Multi-layer Visual: menerapkan teknik penumpukan lapisan visual di mana latar belakang generatif digambar terlebih dahulu sebelum merender aset citra digital eksternal.
 
-## Struktur Direktori
-
-```text
-Kelompok-DAUN/
-├── AnimasiBatik/                  # Folder utama sketsa Processing
-│   ├── AnimasiBatik.pde           # File eksekusi utama (setup dan draw)
-│   ├── SceneKawung.pde            # Modul logika visual motif Kawung
-│   ├── SceneParang.pde            # Modul logika visual motif Parang
-│   └── data/                      # Direktori penyimpanan aset eksternal
-│       └── karakter.png
-├── Docs/                          # Dokumentasi perencanaan proyek
-│   └── Storyboard.pdf
-├── CLAUDE.md                      # Panduan aturan koding dan standar AI
-└── README.md                      # Deskripsi utama repository
-```
-
 ## Struktur Utama
 - AnimasiBatik/: folder proyek Processing utama
 - Docs/: dokumen perencanaan proyek
-- CLAUDE.md: panduan aturan coding dan standar AI

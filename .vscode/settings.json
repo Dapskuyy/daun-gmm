@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^& 'C:\\\\Program Files\\\\Processing\\\\Processing\\.exe' --sketch='E:\\\\Semester 4\\\\multimedia\\\\Kelompok-DAUN\\\\AnimasiBatik' --run$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
