@@ -76,8 +76,8 @@ void setup() {
   size(1280, 720);
   frameRate(24);
 
-  // Catatan presentasi: bagian ini memuat semua gambar dan suara sebelum animasi berjalan.
-  // Muat gambar
+  // bagian ini memuat semua gambar dan suara sebelum animasi berjalan.
+  // Load gambar
   img1 = loadImage("1.png");
   imgKawung = loadImage("Motif-Kawung.png");
   img3 = loadImage("3.1A.png");
@@ -93,12 +93,12 @@ void setup() {
   img53 = loadImage("5.3.png");
   img54 = loadImage("5.4.png");
 
-  // Muat narasi
+  // Load narasi
   for (int i = 0; i < narrFile.length; i++) {
     narrSounds[i] = new SoundFile(this, "Audio/" + narrFile[i]);
   }
 
-  // Muat latar musik
+  // Load latar musik
   bgm = new SoundFile(this, "Audio/BGM.mp3");
   bgm.loop();
   bgm.amp(volumeBGM);
@@ -118,7 +118,13 @@ void draw() {
 
   if (bgm != null) bgm.amp(volumeBGM);
 
-  // Catatan presentasi: bagian ini mengatur urutan scene agar animasi sesuai narasi.
+  // jika sampai akhir kredit, reset kembali ke awal untuk looping.
+  if (waktu >= 115000 + 10000) {
+    loopAnimation();
+    waktu = millis() + waktuOffset;
+  }
+
+  // bagian ini mengatur urutan scene agar animasi sesuai narasi.
   // Penentuan scene berdasarkan waktu
   if (waktu < 24000) scene = 1;
   else if (waktu < 28000) scene = 2;
@@ -157,6 +163,15 @@ void draw() {
 
   triggerAudio(waktu);
   drawSubtitles(waktu);
+}
+
+void loopAnimation() {
+  waktuOffset = -millis();
+  resetAnimationState();
+  stopAllNarration();
+  for (int i = 0; i < narrPlayed.length; i++) {
+    narrPlayed[i] = false;
+  }
 }
 
 // --- Scene awal ---
@@ -267,7 +282,7 @@ void drawScene41(int waktu) {
 }
 
 // --- Scene transisi motif ---
-// Catatan presentasi: scene ini menampilkan perpindahan motif secara halus dan menarik untuk dipresentasikan.
+// scene ini menampilkan perpindahan motif secara halus dan menarik untuk dipresentasikan.
 void drawScene42(int waktu) {
   int waktuMulai = 61000;
   int waktuSelesai = 75000;
@@ -372,7 +387,7 @@ void drawScene54(int waktu) {
 }
 
 // --- Penutup dan kredit ---
-// Catatan presentasi: bagian penutup memberi kesan akhir yang rapi dan membuat karya terasa lengkap.
+// agian penutup memberi kesan akhir yang rapi dan membuat karya terasa lengkap.
 void drawSceneEnding(int waktu) {
   background(255);
   imageMode(CENTER);
@@ -440,7 +455,7 @@ void drawCreditScene() {
 }
 
 // --- Audio dan subtitle ---
-// Catatan presentasi: suara dan subtitle membantu penonton memahami makna dari setiap scene.
+// suara dan subtitle membantu penonton memahami makna dari setiap scene.
 void triggerAudio(int waktu) {
   for (int i = 0; i < narrStart.length; i++) {
     if (!narrPlayed[i] && waktu >= narrStart[i]) {
@@ -515,27 +530,10 @@ void stop() {
 }
 
 void mousePressed() {
-  // Catatan presentasi: klik mouse bisa memindahkan animasi ke scene berikutnya dengan cepat.
+  // klik mouse bisa memindahkan animasi ke scene berikutnya dengan cepat.
   if (mouseButton == LEFT) {
     int w = millis() + waktuOffset;
-    alpha1 = 0;
-    alpha2 = 0;
-    alpha3 = 0;
-    alpha32 = 0;
-    alpha33 = 0;
-    alphaMega = 0;
-    alpha41 = 0;
-    alpha42 = 0;
-    alpha5 = 0;
-    alpha52 = 0;
-    alpha53 = 0;
-    alpha54 = 0;
-    alphaEnding1 = 0;
-    alphaEnding2 = 0;
-    alphaEnding3 = 0;
-    alphaEnding4 = 0;
-    alphaCredit = 0;
-    zoom1 = 1.1;
+    resetAnimationState();
 
     int targetWaktu = -1;
     for (int wp : waypoints) {
@@ -553,6 +551,27 @@ void mousePressed() {
       }
     }
   }
+}
+
+void resetAnimationState() {
+  alpha1 = 0;
+  alpha2 = 0;
+  alpha3 = 0;
+  alpha32 = 0;
+  alpha33 = 0;
+  alphaMega = 0;
+  alpha41 = 0;
+  alpha42 = 0;
+  alpha5 = 0;
+  alpha52 = 0;
+  alpha53 = 0;
+  alpha54 = 0;
+  alphaEnding1 = 0;
+  alphaEnding2 = 0;
+  alphaEnding3 = 0;
+  alphaEnding4 = 0;
+  alphaCredit = 0;
+  zoom1 = 1.1;
 }
 
 // --- Kelas bantu visual ---
