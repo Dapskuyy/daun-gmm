@@ -1,4 +1,4 @@
-# Jejak Makna dalam Sehelai Batik — Kelompok DAUN
+# Visualisasi Filosofi Batik — Kelompok DAUN
 
 Repository ini berisi source code, aset visual/audio, dan dokumentasi untuk proyek akhir mata kuliah Grafika dan Multimedia. Proyek berupa animasi Processing yang menampilkan filosofi tiga motif batik — Kawung, Megamendung, dan Parang — melalui visual bergerak, narasi audio, subtitle, dan transisi scene yang teratur, lalu ditutup dengan scene ending dan credit yang otomatis looping kembali ke awal.
 
@@ -42,7 +42,7 @@ Kelompok-DAUN/
 |---|---|
 | Muhammad Farhan H.A | 24523115 |
 | Dafa Rizal R. | 24523164 |
-| Sifa Aulia A. | 24523164 |
+| Sifa Aulia A. | 24523078 |
 
 ## Persyaratan
 
