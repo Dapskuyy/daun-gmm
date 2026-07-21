@@ -451,7 +451,7 @@ void drawCreditScene() {
   fill(60, 60, 60, alphaCredit);
   text("Muhammad Farhan H.A  24523115", width / 2, height * 0.62);
   text("Dafa Rizal R.  24523164", width / 2, height * 0.72);
-  text("Sifa Aulia A.  24523164", width / 2, height * 0.82);
+  text("Sifa Aulia A.  24523078", width / 2, height * 0.82);
 }
 
 // --- Audio dan subtitle ---
