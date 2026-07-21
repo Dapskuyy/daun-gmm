@@ -282,7 +282,7 @@ void drawScene41(int waktu) {
 }
 
 // --- Scene transisi motif ---
-// scene ini menampilkan perpindahan motif secara halus dan menarik untuk dipresentasikan.
+// scene ini menampilkan perpindahan motif secara halus 
 void drawScene42(int waktu) {
   int waktuMulai = 61000;
   int waktuSelesai = 75000;
@@ -387,7 +387,7 @@ void drawScene54(int waktu) {
 }
 
 // --- Penutup dan kredit ---
-// agian penutup memberi kesan akhir yang rapi dan membuat karya terasa lengkap.
+// Bagian penutup memberi kesan akhir yang rapi dan membuat karya terasa lengkap.
 void drawSceneEnding(int waktu) {
   background(255);
   imageMode(CENTER);
@@ -574,7 +574,7 @@ void resetAnimationState() {
   zoom1 = 1.1;
 }
 
-// --- Kelas bantu visual ---
+// --- Visual Classes ---
 class KunangKunang {
   float startX, startY, xPos, yPos, ukuranGlow, ukuranInti, kecepatanKepak, offset;
   boolean diamDiTengah = false;
