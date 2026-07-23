@@ -67,3 +67,6 @@ Proyek ini sudah menyertakan task VS Code (`.vscode/tasks.json`) yang menjalanka
 
 - Program memerlukan seluruh file di folder `AnimasiBatik/data` (gambar dan audio) tetap berada di lokasi aslinya sebelum dijalankan.
 - Animasi akan otomatis mengulang (loop) dari scene awal setelah credit selesai ditampilkan.
+
+## YouTube
+https://youtu.be/9Zwn4kX2kfo
